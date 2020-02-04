@@ -171,7 +171,7 @@ module Dalli
 
           begin
             values[key] = [deserialize(value, flags), cas]
-          rescue DalliError
+          rescue DalliError, TypeError
           end
 
         else
